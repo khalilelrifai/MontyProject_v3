@@ -8,16 +8,16 @@ Prerequisites:
     Docker
     Docker Compose
 
-In your terminal or command prompt, navigate to the directory containing the docker-compose.yml file and run the following command to start the container:
+    1-  In your terminal or command prompt, navigate to the directory containing the docker-compose.yml file    and run the following command to start the container:
 
-docker-compose up
-This will create and start the Keycloak container. You should be able to access the Keycloak web interface at http://localhost:8080/
+      docker-compose up
+      This will create and start the Keycloak container. You should be able to access the Keycloak web interface at http://localhost:8080/
 
-Once the container is running, you can log in to the Keycloak admin console using the admin username and password you set in the docker-compose.yml file.
+      Once the container is running, you can log in to the Keycloak admin console using the admin username and password you set in the docker-compose.yml file.
 
-From the admin console,  create a new realm with the name myrealm.
+      From the admin console,  create a new realm with the name myrealm.
 
-Within the myrealm realm,  create a new client with the ID myclient.
+      Within the myrealm realm,  create a new client with the ID myclient.
 
 ---------------------------
 {
@@ -35,6 +35,11 @@ Within the myrealm realm,  create a new client with the ID myclient.
 }
 
 ---------------
-create two user:
-one as an administrator with these permissions: can (add,view,edit,update) ad
-another with only can view ad
+1-Run the following command to create the necessary database tables using SQLite3:
+
+  python manage.py makemigrations
+  python manage.py migrate
+
+3-Create two users: an administrator and a regular user.
+  administrator can (view,add,edit,delete) an ad
+  user can only view the ads
