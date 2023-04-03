@@ -1,15 +1,16 @@
 Keycloak Docker Container Setup
 This guide will walk you through setting up a Keycloak Docker container using Docker Compose.
 
-Prerequisites
+Prerequisites:
+    Django
+    django-keycloak-pkg
     Docker
     Docker Compose
 
 In your terminal or command prompt, navigate to the directory containing the docker-compose.yml file and run the following command to start the container:
 
-Copy code
 docker-compose up
-This will create and start the Keycloak container. You should be able to access the Keycloak web interface at http://localhost:8080/.
+This will create and start the Keycloak container. You should be able to access the Keycloak web interface at http://localhost:8080/
 
 Once the container is running, you can log in to the Keycloak admin console using the admin username and password you set in the docker-compose.yml file.
 
