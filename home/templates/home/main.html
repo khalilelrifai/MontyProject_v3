@@ -1,0 +1,12 @@
+{% extends "base_menu.html" %}
+
+{% block content %}
+    <h1>Welcome </h1>
+
+    <ul>
+<li><p><a href="/ads">Show ADS</a></p></li>
+{% if perms.ads.can_add_ad %}
+<li><p><a href="{%url 'ads:ad_create' %}">Create AD</a></p></li>
+{% endif %}
+</ul>
+{% endblock content %}
