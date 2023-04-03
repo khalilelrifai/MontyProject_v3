@@ -41,5 +41,5 @@ Prerequisites:
   python manage.py migrate
 
 3-Create two users: an administrator and a regular user.
-  administrator can (view,add,edit,delete) an ad
-  user can only view the ads
+  administrator with these permissions : can (view,add,edit,delete) an ad.
+  user with this permission : can view ad
