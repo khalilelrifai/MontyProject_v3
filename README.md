@@ -1,5 +1,6 @@
-Keycloak Docker Container Setup
-This guide will walk you through setting up a Keycloak Docker container using Docker Compose.
+"This is a web application built with Django that allows users to create and view ads. Users with admin privileges can create ads, while those with regular user privileges can only view the ads that admins have created.We have used the keycloak identity service "
+--------------------------
+
 
 Prerequisites:
     Django
